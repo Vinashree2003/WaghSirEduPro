@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wagh Sir Edu Pro - Leadership Webinar 2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #0f1419 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #1a1a2e 100%);
+            color: #e6e6fa;
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+          filter: blur();
+        }
+        body::before {
+          filter: blur();
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=1351&q=80') center/cover no-repeat;
+            opacity: 0.5;
+            z-index: -1;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+          .container-1 {
+            max-width: 1200px;
+            margin: 0px auto;
+            padding: 0px 20px;
+        }
+        header {
+            position: sticky;
+            top: 0;
+            background: none;
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(138, 43, 226, 0.3);
+            z-index: 100;
+            padding: 5px 0;
+            
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, #8a2be2, #4b0082, #daa520);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 20px rgba(138, 43, 226, 0.5);
+        }
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1351&q=80') center/cover no-repeat;
+          filter:blur();
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(26, 26, 46, 0.8) 0%, rgba(22, 33, 62, 0.8) 50%, rgba(15, 52, 96, 0.8) 100%);
+            backdrop-filter: blur(2px);
+          filter:blur();
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(138, 43, 226, 0.1) 0%, transparent 70%);
+            animation: float 20s ease-in-out infinite;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 1.5s ease-out;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #e6e6fa, #daa520, #8a2be2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 30px rgba(138, 43, 226, 0.5);
+            line-height: 1.2;
+        }
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            color: #b19cd9;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .btn {
+            display: inline-block;
+            padding: 18px 40px;
+            background: linear-gradient(45deg, #8a2be2, #4b0082);
+            color: #e6e6fa;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 25px rgba(138, 43, 226, 0.4);
+            border: 2px solid rgba(138, 43, 226, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+        .btn:hover::before {
+            left: 100%;
+        }
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(138, 43, 226, 0.6);
+            background: linear-gradient(45deg, #4b0082, #8a2be2);
+        }
+        section {
+            padding: 100px 0;
+            position: relative;
+        }
+        section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1557683316-973673baf926?ixlib=rb-4.0.3&auto=format&fit=crop&w=1351&q=80') center/cover no-repeat;
+            filter: blur();
+            z-index: -1;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 60px;
+            background: linear-gradient(45deg, #8a2be2, #daa520, #4b0082);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 20px rgba(138, 43, 226, 0.3);
+            position: relative;
+        }
+        .section-title::before {
+            content: '✨';
+            position: absolute;
+            left: -30px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            animation: sparkle 2s ease-in-out infinite;
+        }
+        .section-title::after {
+            content: '✨';
+            position: absolute;
+            right: -30px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            animation: sparkle 2s ease-in-out infinite reverse;
+        }
+        .webinar-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+          padding:20px 0px;
+            text-align: center;
+        }
+        .detail-card {
+            background: linear-gradient(135deg, rgba(26, 26, 46, 0.8) 0%, rgba(22, 33, 62, 0.8) 100%);
+            padding: 40px 30px;
+          margin-top:50px
+            border-radius: 20px;
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(138, 43, 226, 0.2);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .detail-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #8a2be2, #4b0082, #daa520);
+        }
+        .detail-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(138, 43, 226, 0.3);
+            border-color: rgba(138, 43, 226, 0.5);
+        }
+        .detail-card i {
+            font-size: 4rem;
+            background: linear-gradient(45deg, #8a2be2, #daa520);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 25px;
+            filter: drop-shadow(0 0 10px rgba(138, 43, 226, 0.5));
+        }
+        .learn-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+        }
+        .learn-item {
+            background: linear-gradient(135deg, rgba(26, 26, 46, 0.8) 0%, rgba(22, 33, 62, 0.8) 100%);
+            padding: 35px;
+            border-radius: 20px;
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(138, 43, 226, 0.2);
+            animation: fadeIn 1.2s ease-out;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        .learn-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(to bottom, #8a2be2, #4b0082);
+            border-radius: 20px 0 0 20px;
+        }
+        .learn-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 10px 30px rgba(138, 43, 226, 0.2);
+        }
+        .learn-item h3 {
+            background: linear-gradient(45deg, #e6e6fa, #daa520);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+        .learn-item::after {
+            content: '📚';
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 1.5rem;
+            opacity: 0.7;
+        }
+        .audience-list, .bonuses-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        .audience-item, .bonus-item {
+            background: linear-gradient(135deg, rgba(26, 26, 46, 0.8) 0%, rgba(22, 33, 62, 0.8) 100%);
+            padding: 25px;
+            border-radius: 15px;
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(138, 43, 226, 0.2);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .audience-item:hover, .bonus-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(138, 43, 226, 0.2);
+            border-color: rgba(138, 43, 226, 0.4);
+        }
+        .audience-item i, .bonus-item i {
+            color: #daa520;
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+        .trainer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 60px;
+            background: linear-gradient(135deg, rgba(26, 26, 46, 0.9) 0%, rgba(22, 33, 62, 0.9) 100%);
+            padding: 50px;
+          margin-top:50px;
+            border-radius: 25px;
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(138, 43, 226, 0.3);
+        }
+        .trainer img {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid transparent;
+            background: linear-gradient(45deg, #8a2be2, #4b0082, #daa520) padding-box;
+            background-clip: padding-box;
+            box-shadow: 0 0 30px rgba(138, 43, 226, 0.5);
+            transition: all 0.3s ease;
+        }
+        .trainer img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 40px rgba(138, 43, 226, 0.7);
+        }
+        .trainer-info h3 {
+            background: linear-gradient(45deg, #e6e6fa, #daa520);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+        }
+        .trainer-info ul li {
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 25px;
+        }
+        .trainer-info ul li::before {
+            content: '⭐';
+            position: absolute;
+            left: 0;
+            color: #daa520;
+        }
+        .registration {
+            background: linear-gradient(135deg, rgba(26, 26, 46, 0.9) 0%, rgba(22, 33, 62, 0.9) 100%);
+            padding: 60px;
+            border-radius: 25px;
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(138, 43, 226, 0.3);
+            max-width: 650px;
+            margin: 0 auto;
+            box-shadow: 0 20px 50px rgba(138, 43, 226, 0.2);
+        }
+        .guarantee {
+            text-align: center;
+            margin-top: 60px;
+            background: linear-gradient(135deg, rgba(26, 26, 46, 0.8) 0%, rgba(22, 33, 62, 0.8) 100%);
+            padding: 50px;
+            border-radius: 20px;
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(138, 43, 226, 0.2);
+        }
+        .guarantee blockquote {
+            font-size: 1.3rem;
+            color: #e6e6fa;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .guarantee blockquote::before {
+            content: '"';
+            font-size: 4rem;
+            color: #8a2be2;
+            position: absolute;
+            left: -20px;
+            top: -10px;
+        }
+        .guarantee blockquote::after {
+            content: '"';
+            font-size: 4rem;
+            color: #8a2be2;
+            position: absolute;
+            right: -20px;
+            bottom: -30px;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes float {
+            0%, 100% { transform: translate(-50%, -50%) rotate(0deg); }
+            50% { transform: translate(-50%, -50%) rotate(180deg); }
+        }
+        @keyframes sparkle {
+            0%, 100% { transform: translateY(-50%) scale(1); opacity: 0.7; }
+            50% { transform: translateY(-50%) scale(1.2); opacity: 1; }
+        }
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .section-title {
+                font-size: 2.2rem;
+            }
+            .trainer {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px;
+            }
+            .registration {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container-1">
+            <div class="logo">Wagh Sir Edu Pro</div>
+            <a href="#registration" class="btn">Register Now</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Wagh Sir Edu Pro Presents:<br>"How to Get High-Paying Leadership Jobs in Top Schools in 2026"</h1>
+            <p>Discover the Proven System to Become a Top School Leader & Get Selected in Verified Leadership Roles (Principal | Vice Principal | Coordinator)</p>
+            <a href="#registration" class="btn">Reserve Your Slot – 100% Free</a>
+        </div>
+    </section>
+
+    <section id="details" class="container">
+        <h2 class="section-title"><i class="fas fa-calendar-alt"></i> Webinar Details</h2>
+        <div class="webinar-details">
+            <div class="detail-card">
+                <i class="fas fa-video"></i>
+                <h3>FREE LIVE WEBINAR WITH DNYANESHWAR WAGH</h3>
+                <p>Learn the exact Leadership Growth, Communication, and Job Selection system that helped educators secure salaries from ₹7 Lakh to ₹22 Lakh per year in leading CBSE, ICSE, IB & Cambridge schools.</p>
+            </div>
+            <div class="detail-card">
+                <i class="fas fa-calendar"></i>
+                <h3>Date: This Week</h3>
+                <p>Time: Limited Seats – First Come, First Serve</p>
+            </div>
+            <div class="detail-card">
+                <i class="fas fa-clock"></i>
+                <h3>Duration: 90 Minutes</h3>
+                <p>Conducted By: Dnyaneshwar Wagh, CBSE Principal (Wagh Sir Edu Pro)</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="learn" class="container">
+        <h2 class="section-title"><i class="fas fa-lightbulb"></i> What You Will Learn</h2>
+        <div class="learn-list">
+            <div class="learn-item">
+                <h3>1. The Leadership Opportunity in 2026</h3>
+                <p>Why schools are urgently hiring leadership professionals & why now is the best time to step into higher-paying roles.</p>
+            </div>
+            <div class="learn-item">
+                <h3>2. The Leadership Selection Formula</h3>
+                <p>A proven 5-step method to crack interviews for Coordinator, VP, and Principal posts — even if you have never attended a leadership interview before.</p>
+            </div>
+            <div class="learn-item">
+                <h3>3. The "Principal-Level Communication Framework"</h3>
+                <p>How to speak, behave & present yourself like a top leader (this alone gets 80% candidates selected).</p>
+            </div>
+            <div class="learn-item">
+                <h3>4. The Mistakes That Reject 89% Leadership Candidates</h3>
+                <p>Avoid these communication, documentation, and demo errors.</p>
+            </div>
+            <div class="learn-item">
+                <h3>5. The 3-Pillar System of High-Authority Leadership</h3>
+                <p>How to master: Teacher management, Parent handling, Academic & operational excellence.</p>
+            </div>
+            <div class="learn-item">
+                <h3>6. How to Instantly Make Your Profile Leadership-Ready</h3>
+                <p>Even if you are currently a teacher or coordinator.</p>
+            </div>
+            <div class="learn-item">
+                <h3>7. How to Get Verified Leadership Job Calls</h3>
+                <p>The step-by-step method to enter Edu Pro's Verified Talent Pool for Leadership Hiring.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="audience" class="container">
+        <h2 class="section-title"><i class="fas fa-users"></i> Who This Webinar Is For</h2>
+        <div class="audience-list">
+            <div class="audience-item"><i class="fas fa-check"></i> Teachers who want a leadership promotion</div>
+            <div class="audience-item"><i class="fas fa-check"></i> Coordinators who want VP-level roles</div>
+            <div class="audience-item"><i class="fas fa-check"></i> Vice Principals who want Principal roles</div>
+            <div class="audience-item"><i class="fas fa-check"></i> Principals who want to refine leadership mastery</div>
+            <div class="audience-item"><i class="fas fa-check"></i> Educators who want to earn higher salaries</div>
+            <div class="audience-item"><i class="fas fa-check"></i> Job seekers looking for verified, safe, trusted schools</div>
+            <div class="audience-item"><i class="fas fa-check"></i> Anyone wanting stability + respect + career growth</div>
+        </div>
+    </section>
+
+    <section id="bonuses" class="container">
+        <h2 class="section-title"><i class="fas fa-gift"></i> What You Get When You Register Today</h2>
+        <p style="text-align: center; margin-bottom: 30px;">FREE Bonuses (Instant Download After Registration)</p>
+        <div class="bonuses-list">
+            <div class="bonus-item"><i class="fas fa-file-alt"></i> Leadership CV Format (Worth ₹999)</div>
+            <div class="bonus-item"><i class="fas fa-question-circle"></i> Leadership Interview Questions Bank (Worth ₹1499)</div>
+            <div class="bonus-item"><i class="fas fa-road"></i> 30-Day Leadership Growth Roadmap (Worth ₹1999)</div>
+            <div class="bonus-item"><i class="fas fa-users"></i> Exclusive Entry to Edu Pro Leadership Community</div>
+        </div>
+        <p style="text-align: center; margin-top: 30px; font-size: 1.2rem;"><strong>Total Value: ₹4,497 | Your Price Today: FREE</strong></p>
+    </section>
+
+    <section id="trainer" class="container">
+        <h2 class="section-title"><i class="fas fa-user-tie"></i> About the Trainer: Dnyaneshwar Wagh</h2>
+        <div class="trainer">
+            <img src="https://storage.googleapis.com/msgsndr/OqZRNxkIYPegDedUBVHW/media/692805110374339db12f7ea2.png" alt="Dnyaneshwar Wagh">
+            <div class="trainer-info">
+                <h3>Founder – Wagh Sir Edu Pro</h3>
+                <ul>
+                    <li>12+ Years in School Leadership & Development</li>
+                    <li>Trained 50,000+ Teachers & Leaders</li>
+                    <li>Helped candidates get placed in 1,000+ schools</li>
+                    <li>Specialised in Leadership Communication + Interview Mastery</li>
+                    <li>Advisor to multiple CBSE/ICSE/International schools</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="registration" class="container">
+        <h2 class="section-title"><i class="fas fa-edit"></i> Register Now Before Seats Fill Up</h2>
+        <p style="text-align: center; margin-bottom: 30px;">Limited 200 seats | Bonus downloads only for first 150 registrations | Free entry to Leadership Talent Pool</p>
+ <div class="registration">
+    <iframe 
+        src="https://ns.myprofunnels.com/widget/form/nQ1Hb9ubgulmYQJ88fBc?notrack=true"
+        frameborder="0"
+        style="width: 100%; height: 950px; border: none; border-radius: 12px; overflow: hidden;"
+        scrolling="no"
+        allowfullscreen>
+    </iframe>
+</div>
+
+    </section>
+
+    <section class="guarantee container"  style="text-align: center;
+            margin-top: 60px;
+            background: linear-gradient(135deg, rgba(26, 26, 46, 0.8) 0%, rgba(22, 33, 62, 0.8) 100%);
+            padding: 50px;
+            border-radius: 20px;
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(138, 43, 226, 0.2);
+        ">
+        <h2 class="section-title"><i class="fas fa-shield-alt"></i> Your Success Guarantee</h2>
+        <blockquote style="
+            font-size: 1.3rem;
+            color: #e6e6fa;
+            margin-bottom: 20px;
+            position: relative;
+        
+        blockquote::before
+            content: '"';
+            font-size: 4rem;
+            color: #8a2be2;
+            position: absolute;
+            left: -20px;
+            top: -10px;
+          content: '"';
+            font-size: 4rem;
+            color: #8a2be2;
+            position: absolute;
+            right: -20px;
+            bottom: -30px;
+        ">
+            "Attend this webinar and I guarantee you'll walk out with a clear plan to reach leadership roles in 2026 — even if you start from zero."
+            <br>— Wagh Sir
+        </blockquote>
+        <p style="margin-top: 30px; font-size: 1.2rem;"><i class="fas fa-rocket"></i> ACT NOW – BUILD YOUR LEADERSHIP CAREER BEFORE 2026 ADMISSIONS START</p>
+        <p>Register Today and Secure Your Leadership Future.</p>
+    </section>
+
+    <script>
+        // Simple fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeIn 1s ease-out';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.learn-item, .audience-item, .bonus-item').forEach(item => {
+            observer.observe(item);
+        });
+    </script>
+</body>
+</html>
